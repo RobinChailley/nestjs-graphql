@@ -1,0 +1,23 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type UserEntity {
+  id: Int!
+  uuid: String!
+  firstName: String!
+  lastName: String!
+}
+
+type Query {
+  getAllUsers: [UserEntity!]!
+}
+
+type Mutation {
+  createUser(userInput: UserInput!): UserEntity!
+}
+
+input UserInput {
+  firstName: String!
+  lastName: String!
+}
