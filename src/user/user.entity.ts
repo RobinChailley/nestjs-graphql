@@ -5,7 +5,7 @@ import { Field, Int, ObjectType } from '@nestjs/graphql';
 @ObjectType()
 export class UserEntity {
   @PrimaryGeneratedColumn()
-  @Field((type) => Int)
+  @Field(() => Int)
   id: number;
 
   @Column()
@@ -14,10 +14,13 @@ export class UserEntity {
   uuid: string;
 
   @Column()
-  @Field()
-  firstName: string;
+  password: string;
 
   @Column()
   @Field()
+  firstName: string;
+
+  @Column({ nullable: true })
+  @Field({ nullable: true })
   lastName: string;
 }

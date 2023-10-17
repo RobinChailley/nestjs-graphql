@@ -6,7 +6,7 @@ type UserEntity {
   id: Int!
   uuid: String!
   firstName: String!
-  lastName: String!
+  lastName: String
 }
 
 type Query {
@@ -15,9 +15,15 @@ type Query {
 
 type Mutation {
   createUser(userInput: UserInput!): UserEntity!
+  deleteUser(deleteUserInput: DeleteUserInput!): UserEntity!
 }
 
 input UserInput {
   firstName: String!
-  lastName: String!
+  password: String!
+  lastName: String
+}
+
+input DeleteUserInput {
+  uuid: String!
 }

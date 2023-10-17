@@ -6,5 +6,8 @@ export class UserInput {
   firstName: string;
 
   @Field()
-  lastName: string;
+  password: string;
+
+  @Field({ nullable: true })
+  lastName?: string;
 }
